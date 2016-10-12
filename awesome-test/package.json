@@ -1,0 +1,8 @@
+{
+  "name": "awesome-test",
+  "main": "server.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1"
+  }
+}
