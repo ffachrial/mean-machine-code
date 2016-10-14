@@ -9,6 +9,9 @@ var express     = require('express'),    // call express
     mongoose    = require('mongoose'),  // for working w/ our database
     port        = process.env.PORT || 8080; // set the port for our app
 
+// connect to our database
+mongoose.connect('mongodb://localhost:27017/meanMachine');
+
 // APP CONFIGURATION -----------------------------------
 // use body-parser so we can grab information from POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
