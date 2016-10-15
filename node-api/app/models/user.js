@@ -3,7 +3,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema,
     bcrypt = require('bcrypt-nodejs');
 
-// user schema
+// user schema (UPDATE : 2016-10-15. for my case, the index must be created BEFORE the document created)
 var UserSchema = new Schema({
     name: String,
     username: { index: { unique: true}, type: String, required: true},
