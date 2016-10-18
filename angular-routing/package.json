@@ -1,0 +1,8 @@
+{
+    "name": "routing-app",
+    "main": "server.js",
+    "version": "1.0.0",
+    "dependencies": {
+        "express":"~4.9.1"
+    }
+}
