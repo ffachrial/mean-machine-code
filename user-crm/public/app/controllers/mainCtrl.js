@@ -22,13 +22,19 @@ angular.module('mainCtrl', [])
         vm.doLogin = function() {
             vm.processing = true;
 
+            // clear the error
+            vm.error = {};
+
             // call the Auth.login() function
             Auth.login(vm.loginData.username, vm.loginData.password)
                 .then(function(data) {
                     vm.processing = true;
 
                     // if a user successfully logs in, redirect to users page
-                    $location.path('/users');
+                    if (data.success)
+                        $location.path('/users');
+                    else
+                        vm.error = data.message;
                 });
         };
 
