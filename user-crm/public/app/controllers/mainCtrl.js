@@ -1,4 +1,5 @@
 angular.module('mainCtrl', [])
+
     .controller('mainController', function($rootScope, $location, Auth) {
 
         var vm = this;
@@ -12,8 +13,8 @@ angular.module('mainCtrl', [])
 
             // get user information on route change
             Auth.getUser()
-                .success(function(data) {
-                    vm.user = data;
+                .then(function(data) {
+                    vm.user = data.data;
                 });
         });
 
@@ -22,7 +23,7 @@ angular.module('mainCtrl', [])
 
             // call the Auth.login() function
             Auth.login(vm.loginData.username, vm.loginData.password)
-                .success(function(data) {
+                .then(function(data) {
 
                     // if a user successfully logs in, redirect to users page
                     $location.path('/users');

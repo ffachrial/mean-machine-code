@@ -1,8 +1,8 @@
 angular.module('userApp', [
-    'ngAnimate',            // add animation
+   'ngAnimate',            // add animation
     'app.routes',           // routing for application
-    'authService',          
+   'authService',          
     'mainCtrl',
-    'userCtrl',
-    'userService'
+//   'userCtrl',
+   'userService'
 ]);
