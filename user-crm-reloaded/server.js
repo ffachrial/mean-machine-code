@@ -7,6 +7,13 @@ var app     = express();            // define app using express
 var path    = require('path');      // used for delimiter '/'
 var config  = require('./config');  // call config for parameters
 
+// ROUTES FOR OUR API ===================
+// ======================================
+
+// API ROUTES----------------------------
+var apiRoutes = require('./app/routes/api')(app, express);
+app.use('/api', apiRoutes);
+
 // MAIN CACTHALL ROUTE ------------------
 // SEND USERS TO FRONTEND ---------------
 // has to be registered after API ROUTES
