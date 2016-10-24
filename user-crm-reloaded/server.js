@@ -2,10 +2,16 @@
 // ======================================
 
 // CALL THE PACKAGES --------------------
-var express = require('express');   // call express
-var app     = express();            // define app using express
-var path    = require('path');      // used for delimiter '/'
-var config  = require('./config');  // call config for parameters
+var express     = require('express');   // call express
+var app         = express();            // define app using express
+var path        = require('path');      // used for delimiter '/'
+var config      = require('./config');  // call config for parameters
+var mongoose    = require('mongoose');  // call mongoose for database connection
+
+// APP CONFIGURATION ====================
+// ======================================
+// connect to our database (accessed at http://localhost:27017)
+mongoose.connect(config.database);
 
 // ROUTES FOR OUR API ===================
 // ======================================
