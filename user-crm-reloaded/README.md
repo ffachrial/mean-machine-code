@@ -1,8 +1,10 @@
 # H2 Introduction
-First weeks of the October 2016 I followed the course of the ME_N Stack (not included the 'A' for Angular).
+First weeks of the October 2016 I followed the course of the ME_N Stack (not included the 'A' for Angular). The course was great,
+but in the end, I still want to completely the MEAN Stack. So continue learning by looking for tutorial from internet and tried
+to create simple application. It doesnt work anyway. 
 
 I'm tried to use different approach. Last time I got failed when try connecting from Angular to services, 
-so I'll focused on how connecting between Fronted and Backend first.
+so I'll focused on learn how connecting between Fronted and Backend first. And then continue untill application works nicely.
 
 # H2 Create Basic Server
 1. Create standard **package.json** file by *npm init*
@@ -24,10 +26,28 @@ so I'll focused on how connecting between Fronted and Backend first.
 # H2 Create Basic User Model
 1. Create **user.js** on *app/models/user.js*
 2. Install mongoose by *npm install --save mongoose*
-3. Add Schema to user.js
+3. Modify **user.js** 
+  1. Add Schema
 
 # H2 Create API to GET Users data
 1. Add api for get users from database (mongodb)
-2. Add config parameter to connect to database
+  1. Add *apiRouter.route('/users')* section for routing to users api
+2. Add config parameter to connect to database at *http://localhost:27017/database_name*
 3. Add database connection to server.js
 
+# H2 Create Basic Frontend for display Users data
+1. Modify **index.html**
+  1. Add AngularJS for running AngularJS Script
+  2. Add section for angular views
+2. Create **all.html** on *public/app/views/pages/users/all.html*
+
+# H2 Create Basic Routing for display all user pages
+1. Modify **index.html**
+  1. Add Angular Routing
+2. Create **app.js** on *public/app/app.js*
+3. Create **app.routes.js** on *public/app/app.routes.js*
+  1. Add route to all.html
+
+# H2 Create Service for GET Users data
+1. Create **userService.js** on *public/app/services/userService.js*
+2. Create **userCtrl.js** on *public/app/controllers/userCtrl.js*
