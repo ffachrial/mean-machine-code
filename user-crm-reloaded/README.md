@@ -29,7 +29,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 3. Modify **user.js** 
   1. Add Schema
 
-# H2 Create API to GET Users data
+# H2 Create API to GET Users data (R from CRUD)
 1. Add api for get users from database (mongodb)
   1. Add *apiRouter.route('/users')* section for routing to users api
 2. Add config parameter to connect to database at *http://localhost:27017/database_name*
@@ -51,3 +51,24 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Create Service for GET Users data
 1. Create **userService.js** on *public/app/services/userService.js*
 2. Create **userCtrl.js** on *public/app/controllers/userCtrl.js*
+
+# H2 Formating page using Bootstrap
+1. Modify **index.html**
+  1. Add bootstrap css
+2. Create **style.css** on *public/assets/css/style.css*
+3. Modify **all.html**
+
+# H2 Create API to POST Users data (C from CRUD)
+1. Install bcrypt-nodejs, morgan and body-parser by *npm install bcrypt-nodejs morgan body-parser --save*
+2. Modify **server.js**
+  1. Add body parser for POST requests
+  2. Add morgan for log requests
+3. Modify **user.js**
+  1. Add function for hash password
+4. Modify **api.js**
+  1. Add function for POST user data
+
+# H2 Create Frontend for add user data
+1. Modify **all.html**
+  1. Add page header
+2. Create **single.html** on *public/app/views/pages/users/all.html*
