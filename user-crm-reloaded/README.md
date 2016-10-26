@@ -72,3 +72,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 1. Modify **all.html**
   1. Add page header
 2. Create **single.html** on *public/app/views/pages/users/all.html*
+
+# H2 Create Routing for display User Create page
+1. Modify **app.routes.js**
+  1. Add route to single.html
