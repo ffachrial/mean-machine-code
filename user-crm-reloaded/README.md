@@ -68,7 +68,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 4. Modify **api.js**
   1. Add function for POST user data
 
-# H2 Create Frontend for add user data
+# H2 Create Frontend for add user data (C from CRUD)
 1. Modify **all.html**
   1. Add page header
 2. Create **single.html** on *public/app/views/pages/users/all.html*
