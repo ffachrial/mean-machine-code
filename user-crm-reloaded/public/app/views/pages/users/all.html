@@ -1,0 +1,16 @@
+<table ng-show="user.users">
+    <thead>
+        <tr>
+            <th>_id</th>
+            <th>Name</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="person in user.users">
+            <td>{{ person._id }}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.username }}</td>
+        </tr>
+    </tbody>
+</table>
