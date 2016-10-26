@@ -13,7 +13,9 @@ angular.module('app.routes', ['ngRoute'])
             
             // form to create a new user
             .when('/users/create', {
-                templateUrl : 'app/views/pages/users/single.html'
+                templateUrl : 'app/views/pages/users/single.html',
+                controller  : 'userCreateController',
+                controllerAs: 'user'
             });
 
         $locationProvider.html5Mode(true);
