@@ -12,6 +12,11 @@ angular.module('userService', [])
             return $http.get('/api/users/');
         };
 
+        // create a user
+        userFactory.create = function(userData) {
+            return $http.post('/api/users/', userData);
+        };
+        
         // return our entire userFactory object
         return userFactory;
         

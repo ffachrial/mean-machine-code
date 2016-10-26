@@ -73,6 +73,18 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
   1. Add page header
 2. Create **single.html** on *public/app/views/pages/users/all.html*
 
-# H2 Create Routing for display User Create page
+# H2 Add Routing for display User Create page (C from CRUD)
 1. Modify **app.routes.js**
   1. Add route to single.html
+
+# H2 Add Controller for Create new user (C from CRUD)
+1. Modify **userCtrl.js**
+  1. Add Controller for Create new user
+2. Modify **app.routes.js**
+  1. Add Controller and ControllerAs
+3. Modify **single.html**
+  1. Add Angular components
+
+# H2 Add Services for POST User data (C from CRUD)
+1. Modify **userService.js**
+  1. Add POST user data
