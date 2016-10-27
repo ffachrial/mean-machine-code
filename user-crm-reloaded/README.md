@@ -134,3 +134,6 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add Service for DELETE User data
 1. Modify **userService.js**
   1. Add DELETE user data
+
+# H2 Create Frontend for Home Page
+1. Create **home.html** on *public/app/views/pages/home.html*
