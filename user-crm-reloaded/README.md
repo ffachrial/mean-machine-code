@@ -163,3 +163,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add API to POST for authenticate user
 1. Modify **api.js**
   1. Add POST to authenticate name, username and password
+
+# H2 Create Service for basic authenticate user
+1. Create **authService.js** on *public/app/services/authService.js*
+  1. Add function for log in user
