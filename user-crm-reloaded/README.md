@@ -141,3 +141,6 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add Routing for display Home Page
 1. Modify **app.routes.js**
   1. Add route to home.html
+
+# H2 Create Frontend for Login Page
+1. Create **login.html** on *public/app/views/pages/login.html*
