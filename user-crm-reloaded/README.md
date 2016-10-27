@@ -116,3 +116,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 1. Modify **api.js**
   1. Add function for GET single user data
   2. Add function for PUT single user data
+
+# H2 Add API to DELETE User data (D from CRUD)
+1. Modify **api.js**
+  1. Add function for DELETE single user data

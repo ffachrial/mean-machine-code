@@ -83,7 +83,18 @@ module.exports = function(app, express) {
 
                 });
             });
-        });
+        })
         
+        // delete the user with this id
+        .delete(function(req, res) {
+            User.remove({ _id : req.params.user_id }, function(err, user) {
+                if (err)
+                    res.send(err);
+
+                    // return a message
+                    res.json({ message : 'Successfully deleted' });
+            });
+        });
+
     return apiRouter;
 };
