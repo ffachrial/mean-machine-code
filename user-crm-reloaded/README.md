@@ -130,3 +130,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
   1. Add Controller for delete user
 2. Modify **all.html**
   1. Add Angular components
+
+# H2 Add Service for DELETE User data
+1. Modify **userService.js**
+  1. Add DELETE user data
