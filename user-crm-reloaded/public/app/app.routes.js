@@ -4,6 +4,11 @@ angular.module('app.routes', ['ngRoute'])
 
         $routeProvider
 
+            // route for the home page
+            .when('/', {
+                templateUrl : 'app/views/pages/home.html'
+            })
+
             // show all users
             .when('/users', {
                 templateUrl : 'app/views/pages/users/all.html',
