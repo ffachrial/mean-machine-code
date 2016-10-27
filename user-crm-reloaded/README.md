@@ -120,3 +120,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add API to DELETE User data (D from CRUD)
 1. Modify **api.js**
   1. Add function for DELETE single user data
+
+# H2 Create Fronted for delete user data (D from CRUD)
+1. Modify **all.html**
+  1. Add function button for delete single user
