@@ -94,3 +94,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
   1. Add Edit button
 2. Modify **single.html**
   1. Add Header and button Edit
+
+# H2 Add Routing for display User Edit page (U from CRUD)
+1. Modify **app.routes.js**
+  1. Add route to single.html
