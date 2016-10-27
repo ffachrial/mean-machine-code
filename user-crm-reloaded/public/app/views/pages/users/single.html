@@ -1,6 +1,6 @@
 <div class="page-header">
     <h2 ng-if="user.type == 'create'">Create User</h2>
-    <h2>Edit User</h2>
+    <h2 ng-if="user.type == 'edit'">Edit User</h2>
 </div>
 
 <form class="form-horizontal" ng-submit="user.saveUser()">
@@ -29,7 +29,7 @@
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-6">
             <button type="submit" class="btn btn-success btn-lg btn-block" ng-if="user.type == 'create'">Create User</button>
-            <button type="submit" class="btn btn-success btn-lg btn-block">Edit User</button>
+            <button type="submit" class="btn btn-success btn-lg btn-block" ng-if="user.type == 'edit'">Edit User</button>
         </div>
     </div>
 
