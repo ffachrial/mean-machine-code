@@ -17,12 +17,34 @@ module.exports = function(app, express) {
 
             if (err)
                 throw err;
+            
+            // no user with that username was found
+            if (!user) {
 
-            // if user is found and password is right
-            // return the information
-            res.json({
-                success: true
-            });
+                res.json({
+                    success: false,
+                    message: 'Authentication failed. User not found.'
+                });
+
+            } else if (user) {
+
+                // check if password matches
+                var validPassword = user.comparePassword(req.body.password);
+                if (!validPassword) {
+
+                    res.json({
+                        success: false,
+                        message: 'Authentication failed. Wrong password.'
+                    });
+
+                } else {
+                    // if user is found and password is right
+                    // return the information
+                    res.json({
+                        success: true
+                    });
+                }
+            }
         });
     });
 

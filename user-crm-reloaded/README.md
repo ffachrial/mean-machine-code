@@ -167,3 +167,14 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Create Service for basic authenticate user
 1. Create **authService.js** on *public/app/services/authService.js*
   1. Add function for log in user
+
+# H2 Add Controller for authenticate user login
+1. Modify **mainCtrl.js**
+  1. Add Auth service
+  2. Add login check
+2. Modify **app.js**
+  1. Add authService
+3. Modify **index.html**
+  1. Add authService.js source
+4. Modify **login.html**
+  1. Add Angular components
