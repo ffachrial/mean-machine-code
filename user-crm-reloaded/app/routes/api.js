@@ -5,6 +5,27 @@ module.exports = function(app, express) {
     // get an instance of the express router
     var apiRouter = express.Router();
 
+    // route to authenticate a user (POST http://localhost:8080/api/authenticate)
+    apiRouter.post('/authenticate', function(req, res) {
+
+        // find the user
+        User.findOne({
+            username: req.body.username
+        })
+
+        .select('name username password').exec(function(err, user) {
+
+            if (err)
+                throw err;
+
+            // if user is found and password is right
+            // return the information
+            res.json({
+                success: true
+            });
+        });
+    });
+
     // test route to make sure everything is working
     // accessed at GET http://localhost:port_number/api
     apiRouter.get('/', function(req, res) {

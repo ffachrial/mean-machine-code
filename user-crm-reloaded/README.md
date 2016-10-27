@@ -159,3 +159,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
   1. Add controller and controllerAs to login.html
 5. Modify **login.html**
   1. Add Angular components
+
+# H2 Add API to POST for authenticate user
+1. Modify **api.js**
+  1. Add POST to authenticate name, username and password
