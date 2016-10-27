@@ -88,3 +88,9 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add Services for POST User data (C from CRUD)
 1. Modify **userService.js**
   1. Add POST user data
+
+# H2 Create Frontend for update user data (U from CRUD)
+1. Modify **all.html**
+  1. Add Edit button
+2. Modify **single.html**
+  1. Add Header and button Edit
