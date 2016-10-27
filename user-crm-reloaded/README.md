@@ -98,3 +98,21 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add Routing for display User Edit page (U from CRUD)
 1. Modify **app.routes.js**
   1. Add route to single.html
+
+# H2 Add Controller for Edit user (U from CRUD)
+1. Modify **userCtrl.js**
+  1. Add Controller for Edit user
+2. Modify **single.html**
+  1. Add Angular components
+3. Modify **all.html**
+  1. Add Angular components
+
+# H2 Add Service for PUT User data (U from CRUD)
+1. Modify **userService.js**
+  1. Add PUT user data
+  2. Add GET single user data
+
+# H2 Add API to GET and PUT User data (U from CRUD)
+1. Modify **api.js**
+  1. Add function for GET single user data
+  2. Add function for PUT single user data
