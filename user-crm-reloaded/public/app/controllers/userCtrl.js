@@ -12,6 +12,22 @@ angular.module('userCtrl', ['userService'])
                 vm.users = res.data;
 
             });
+
+        // function to delete a user
+        vm.deleteUser = function(id) {
+
+            User.delete(id)
+                .then(function(res) {
+
+                    // get all users to update the table
+                    // you can also set up your api
+                    // to return the list of users with the delete call
+                    User.all()
+                        .then(function(res) {
+                            vm.users = res.data;
+                        });
+                });
+        };
     })
     
     // controller applied to user creation page

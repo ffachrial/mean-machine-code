@@ -124,3 +124,9 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Create Fronted for delete user data (D from CRUD)
 1. Modify **all.html**
   1. Add function button for delete single user
+
+# H2 Add Controller for Delete user (D from CRUD)
+1. Modify **userCtrl.js**
+  1. Add Controller for delete user
+2. Modify **all.html**
+  1. Add Angular components
