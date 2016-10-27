@@ -178,3 +178,7 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
   1. Add authService.js source
 4. Modify **login.html**
   1. Add Angular components
+
+# H2 Frontend Navbar for application
+1. Modify **index.html**
+  1. Add Navbar for application navigation and info
