@@ -11,7 +11,9 @@ angular.module('app.routes', ['ngRoute'])
 
             // login page
             .when('/login', {
-                templateUrl : 'app/views/pages/login.html'
+                templateUrl : 'app/views/pages/login.html',
+                controller  : 'mainController',
+                controllerAs: 'login'
             })
 
             // show all users

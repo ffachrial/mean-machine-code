@@ -148,3 +148,14 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add Routing for display Login Page
 1. Modify **app.routes.js**
   1. Add route to login.html
+
+# H2 Create Controller for user login
+1. Create **mainCtrl.js** on *public/app/controllers/mainCtrl.js*
+2. Modify **app.js**
+  1. Add mainCtrl.js
+3. Modify **index.html**
+  1. Add Angular components
+4. Modify **app.routes.js**
+  1. Add controller and controllerAs to login.html
+5. Modify **login.html**
+  1. Add Angular components

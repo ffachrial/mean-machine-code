@@ -1,1 +1,1 @@
-angular.module('userApp', ['app.routes', 'userCtrl', 'userService']);
+angular.module('userApp', ['app.routes', 'mainCtrl', 'userCtrl', 'userService']);
