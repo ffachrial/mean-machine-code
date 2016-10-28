@@ -201,4 +201,4 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add services for get token and store on localstorage
 1. Modify **authService.js**
   1. GET SET token from API
-  2. And store localStorage service 
+  2. Add store localStorage service 

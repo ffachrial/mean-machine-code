@@ -29,7 +29,7 @@ app.use(morgan('dev'));
 
 // connect to our database (accessed at http://localhost:27017)
 // use mongoose.Promise for clear issue: mpromise is deprecated
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 mongoose.connect(config.database);
 
 // set static files location
