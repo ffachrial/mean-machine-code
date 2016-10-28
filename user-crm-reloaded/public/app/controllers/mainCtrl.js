@@ -1,8 +1,17 @@
 angular.module('mainCtrl', [])
 
-    .controller('mainController', function($location, Auth) {
+    .controller('mainController', function($rootScope, $location, Auth) {
 
         var vm = this;
+
+        // get info if a person is logged in
+        vm.loggedIn = Auth.isLoggedIn();
+
+        // check to see if a user is logged in on every request
+        $rootScope.$on('$routeChangeStart', function() {
+            vm.loggedIn = Auth.isLoggedIn();	
+
+        });	
 
         // function to handle login form
         vm.doLogin = function() {
@@ -11,12 +20,12 @@ angular.module('mainCtrl', [])
             vm.error = '';
 
             Auth.login(vm.loginData.username, vm.loginData.password)
-                .then(function(res) {
+                .then(function(data) {
                     // if a user successfully logs in, redirect to users page
-                    if (res.data.success)
+                    if (data.success)
                         $location.path('/users');
                     else
-                        vm.error = res.data.message;
+                        vm.error = data.message;
                 });
         };
 
