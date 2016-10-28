@@ -1,4 +1,9 @@
 var User    = require('../models/user');    // call user model from user.js
+var jwt        = require('jsonwebtoken');   // call jsonwebtoken for token use
+var config     = require('../../config');   // call config for secret
+
+// super secret for creating tokens
+var superSecret = config.secret;
 
 module.exports = function(app, express) {
 
@@ -38,10 +43,21 @@ module.exports = function(app, express) {
                     });
 
                 } else {
+
                     // if user is found and password is right
-                    // return the information
+                    // create a token
+                    var token = jwt.sign({
+                        name: user.name,
+                        username: user.username
+                    }, superSecret, {
+                    expiresIn: '1h' // expires in 1 hour
+                    });
+
+                    // return the information including token as JSON
                     res.json({
-                        success: true
+                        success: true,
+                        message: 'Enjoy your token!',
+                        token: token
                     });
                 }
             }
