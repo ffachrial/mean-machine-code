@@ -182,3 +182,23 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Frontend Navbar for application
 1. Modify **index.html**
   1. Add Navbar for application navigation and info
+
+# H2 Add token authentication on API
+1. Install jsonwebtoken by *npm install --save jsonwebtoken*
+2. Modify **config.js**
+  1. Add secret
+3. Modify **api.js**
+  1. Add function for create token
+  2. Return info with token
+
+# H2 Add Controller for token authentication
+1. Modify **mainCtrl.js**
+  1. Add loggedIn user info
+  2. Add $rootScope for get loggedIn on every requests
+2. Modify **index.html**
+  1. Add Angular components
+
+# H2 Add services for get token and store on localstorage
+1. Modify **authService.js**
+  1. GET SET token from API
+  2. And store localStorage service 
