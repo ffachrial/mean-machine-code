@@ -201,4 +201,30 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 # H2 Add services for get token and store on localstorage
 1. Modify **authService.js**
   1. GET SET token from API
-  2. Add store localStorage service 
+  2. Add store localStorage service
+
+# H2 Add API for user info on Navbar
+1. Modify **api.js**
+  1. Add user info
+  2. Add middleware for verify token
+
+# H2 Add services for GET user info
+1. Modify **authService.js**
+  1. Get user info
+  2. Integrate token into requests using AuthInterceptor
+
+#H2 Add Controller for user info
+1. Modify **mainCtrl.js**
+  1. get user info from services
+2. Modify **app.js**
+  1. attach interceptor into requests
+3. Modify **index.html**
+  1. Add Angular components
+
+#H2 Add logout service for log user out
+1. Modify **authService.js**
+
+#H2 Add Controller for log user out
+1. Modify **mainCtrl.js**
+2. Modify **index.html**
+  1. Add Angular component
