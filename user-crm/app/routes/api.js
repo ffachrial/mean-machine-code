@@ -1,6 +1,7 @@
 var User        = require('../models/user'),
     jwt         = require('jsonwebtoken'),  // get jsonwebtoken
-    config      = require('../../config');
+    config      = require('../../config'),
+    bodyParser  = require('body-parser');
 
 // create variable so that we can use this string as secret
 var superSecret = config.secret;
@@ -46,7 +47,7 @@ module.exports = function(app, express) {
                         username: user.username
                     }, superSecret, {
                         //expiresInMinutes: 1440  // expires in 24 hours (UPDATE : 2016-10-17. for my case, it have to call expiresIn rather than expiresInMinutes)
-                        expiresIn: 60*24    // expires in 24 hours
+                        expiresIn: '24h'    // expires in 24 hours
                     });
 
                     // return the information including token as JSON
@@ -68,7 +69,8 @@ module.exports = function(app, express) {
         // check header or url parameters or post parameters for token
         // var token = req.body.token || req.param('token') || req.headers['x-access-token'];
         // in express 4, req.param(name) is deprecated. use req.params.name instead
-        var token = req.body.token || req.params.token || req.headers['x-access-token'];
+        // based on MEAN Machine github repository, change req.params.name to req.query.name
+        var token = req.body.token || req.query.token || req.headers['x-access-token'];
 
         // decode token
         if (token) {
@@ -138,7 +140,7 @@ module.exports = function(app, express) {
         
         // get all the users (accessed at GET http://localhost:8080/api/users)
         .get(function(req, res) {
-            User.find(function(err, users) {
+            User.find({}, function(err, users) {
                 if (err) return res.send(err);
 
                 // return the users
@@ -196,6 +198,11 @@ module.exports = function(app, express) {
                 res.json({ message: 'Successfully deleted' });
             });
         });
-
+    
+    // api endpoint to get user information
+    apiRouter.get('/me', function(req, res) {
+        res.send(req.decoded);
+    });
+    
     return apiRouter;
 };
