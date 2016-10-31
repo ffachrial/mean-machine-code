@@ -4,9 +4,15 @@ angular.module('userCtrl', ['userService'])
 
         var vm = this;
 
+        // set a processing variable to show loading things
+        vm.processing = true;
+
         // grab all the users at page load
         User.all()
             .then(function(res) {
+
+                // when all the users come back, remove the processing variable
+                vm.processing = false;
 
                 // bind the users that come back to vm.users
                 vm.users = res.data;
@@ -16,6 +22,9 @@ angular.module('userCtrl', ['userService'])
         // function to delete a user
         vm.deleteUser = function(id) {
 
+            // set a processing variable
+            vm.processing = true;
+
             User.delete(id)
                 .then(function(res) {
 
@@ -24,6 +33,7 @@ angular.module('userCtrl', ['userService'])
                     // to return the list of users with the delete call
                     User.all()
                         .then(function(res) {
+                            vm.processing = false;
                             vm.users = res.data;
                         });
                 });
@@ -42,11 +52,14 @@ angular.module('userCtrl', ['userService'])
         // function to create a user
         vm.saveUser = function() {
 
+            vm.processing = true;
+
             vm.message = '';
 
             // use the create function in the userService
             User.create(vm.userData)
                 .then(function(res) {
+                    vm.processing = false;
                     vm.userData = {};
                     vm.message = res.data.message;
                 });
@@ -71,12 +84,15 @@ angular.module('userCtrl', ['userService'])
 
         // function to save the user
         vm.saveUser = function() {
+            vm.processing = true
             vm.message = '';
 
             // call the userService function to update
             User.update($routeParams.user_id, vm.userData)
                 .then(function(res) {
 
+                    vm.processing = false;
+                    
                     // clear the form
                     vm.userData = {};
 

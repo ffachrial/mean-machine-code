@@ -227,4 +227,19 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 ## Add Controller for log user out
 1. Modify **mainCtrl.js**
 2. Modify **index.html**
-  1. Add Angular component
+  1. Add Angular components
+
+## Add Frontend Animate Angular
+1. Modify **index.html**
+  1. Add script *angular-animate.js*
+2. Modify **login.html**
+  1. Add angular components
+3. Modify **all.html**
+  1. Add Text Loading info
+
+## Controller for Animate Angular
+1. Modify **mainCtrl.js**
+  1. Add animate processing
+2. Modify **userCtrl.js**
+  1. Add animate processing
+
