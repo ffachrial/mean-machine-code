@@ -10,7 +10,7 @@ module.exports = function(app, express) {
     // get an instance of the express router
     var apiRouter = express.Router();
 
-    // route to authenticate a user (POST http://localhost:8080/api/authenticate)
+    // route to authenticate a user (POST http://localhost:port_number/api/authenticate)
     apiRouter.post('/authenticate', function(req, res) {
 
         // find the user
@@ -50,7 +50,7 @@ module.exports = function(app, express) {
                         name: user.name,
                         username: user.username
                     }, superSecret, {
-                    expiresIn: '1h' // expires in 1 hour
+                        expiresIn: '1h' // expires in 1 hour
                     });
 
                     // return the information including token as JSON
@@ -112,7 +112,7 @@ module.exports = function(app, express) {
     // on routes that end in /users
     // ----------------------------------
     apiRouter.route('/users')
-        // create a user (accessed at POST http://localhost:8080/api/users)
+        // create a user (accessed at POST http://localhost:port_number/api/users)
         .post(function(req, res) {
 
             var user = new User();              // create a new instance of the User model

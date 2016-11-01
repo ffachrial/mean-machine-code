@@ -11,11 +11,11 @@ angular.module('mainCtrl', [])
         $rootScope.$on('$routeChangeStart', function() {
             vm.loggedIn = Auth.isLoggedIn();	
 
-		// get user information on page load
-		Auth.getUser()
-			.then(function(data) {
-				vm.user = data.data;
-			});	
+            // get user information on page load
+            Auth.getUser()
+                .then(function(data) {
+                    vm.user = data.data;
+                });	
 
         });	
 
