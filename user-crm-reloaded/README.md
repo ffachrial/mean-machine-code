@@ -243,3 +243,12 @@ so I'll focused on learn how connecting between Fronted and Backend first. And t
 2. Modify **userCtrl.js**
   1. Add animate processing
 
+## Module for Animate Angular
+1. Modify **app.js**
+  1. Add ngAnimate
+
+## Style for Animate
+1. Modify **style.css**
+  1. Add HEADER
+  2. Add NGANIMATE
+  3. Add ANIMATIONS
